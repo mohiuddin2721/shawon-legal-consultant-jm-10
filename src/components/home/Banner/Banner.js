@@ -26,8 +26,8 @@ const Banner = () => {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                    <h3>Shawon Legal Consultant</h3>
-                    <p>I have adequate knowledge, consultants and logistics to undertake any legal, para legal or related service.</p>
+                    <h3 className='second-banner-title'>Shawon Legal Consultant</h3>
+                    <p className='second-banner-info'>I have adequate knowledge, consultants and logistics to undertake any legal, para legal or related service.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -37,8 +37,8 @@ const Banner = () => {
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <h3 className='text-warning'>My Specialty</h3>
-                    <p className='text-warning'>We always try to find out what is the desired outcome of the clients.</p>
+                    <h3 className='text-warning second-banner-title'>My Specialty</h3>
+                    <p className='text-warning second-banner-info'>We always try to find out what is the desired outcome of the clients.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
