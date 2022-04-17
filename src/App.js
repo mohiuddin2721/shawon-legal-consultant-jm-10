@@ -11,6 +11,7 @@ import Clientele from './components/home/Clientele/Clientele';
 import Blog from './components/home/Blog/Blog';
 import Contact from './components/home/Contact/Contact';
 import AboutMe from './components/home/AboutMe/AboutMe';
+import RequireAuth from './components/loginRegRequireAuth/RequireAuth/RequireAuth';
 import Login from './components/loginRegRequireAuth/Login/Login';
 import Register from './components/loginRegRequireAuth/Register/Register';
 
@@ -22,7 +23,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/service' element={<Services></Services>}></Route>
-        <Route path='/checkOut' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/checkOut' element={
+        <RequireAuth>
+          <CheckOut></CheckOut>
+        </RequireAuth>
+        }></Route>
         <Route path='/clientele' element={<Clientele></Clientele>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
