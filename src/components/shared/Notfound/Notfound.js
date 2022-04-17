@@ -5,7 +5,7 @@ import './Notfound.css';
 const Notfound = () => {
     return (
         <div className='w-100 d-flex justify-content-center align-items-center'>
-            <div className='mt-5'>
+            <div className='m-5'>
                 <p>We are sorry, page not found.</p>
                 <h1 className='text-danger'>Error 404</h1>
                 <Link to='/home'>

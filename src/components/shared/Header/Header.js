@@ -15,15 +15,15 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link className='text-light' as={Link} to="/home">HOME</Nav.Link>
-                            <Nav.Link className='text-light' as={Link} to="/service">SERVICE</Nav.Link>
-                            <Nav.Link className='text-light' as={Link} to="/clientele">CLIENTELE</Nav.Link>
-                            <Nav.Link className='text-light' as={Link} to="/blog">BLOG</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/home">HOME</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/service">SERVICE</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/clientele">CLIENTELE</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/blog">BLOG</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link className='text-light' as={Link} to="/contact">CONTACT</Nav.Link>
-                            <Nav.Link className='text-light' as={Link} to="/aboutMe">ABOUT ME</Nav.Link>
-                            <Nav.Link className='text-light' as={Link} to="/signIn">SIGNIN</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/contact">CONTACT</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/aboutMe">ABOUT ME</Nav.Link>
+                            <Nav.Link className='text-light fw-bold' as={Link} to="/logIn">LOG IN</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
