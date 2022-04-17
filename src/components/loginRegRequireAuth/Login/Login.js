@@ -1,5 +1,6 @@
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
@@ -20,6 +21,7 @@ const Login = () => {
             </Form>
             <p>New to Shawon legal consultant? <Link to="/register" className='text-primary pe-auto text-decoration-none'>Please Register</Link> </p>
             <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
