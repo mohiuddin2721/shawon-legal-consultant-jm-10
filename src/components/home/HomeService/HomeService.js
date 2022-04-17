@@ -20,7 +20,7 @@ const HomeService = (props) => {
                         {description}
                     </Card.Text>
                     <Link to={'/checkOut'}>
-                        <Button variant="outline-warning d-flex text-decoration-none mx-auto px-5">Order</Button>
+                        <Button variant="outline-warning" className='d-flex text-decoration-none mx-auto px-5'>Order</Button>
                     </Link>
                 </Card.Body>
             </Card>
