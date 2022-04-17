@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import HomeService from '../HomeService/HomeService';
+import Service from '../Service/Service';
 
-const HomeServices = () => {
+const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
@@ -10,24 +9,19 @@ const HomeServices = () => {
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
-
-    const sixServices = services.slice(0, 6);
     return (
         <div>
             <h1 style={{ 'color': '#cc8809' }} className='text-center m-3'>service of law</h1>
             <div className='row container mx-auto'>
                 {
-                    sixServices.map(service => <HomeService
+                    services.map(service => <Service
                         key={service.id}
                         service={service}
-                    ></HomeService>)
+                    ></Service>)
                 }
             </div>
-            <Link to={'/service'}>
-                <button type="button" class="btn btn-light text-warning fs-3 mx-auto d-flex">See more services </button>
-            </Link>
         </div>
     );
 };
 
-export default HomeServices;
+export default Services;

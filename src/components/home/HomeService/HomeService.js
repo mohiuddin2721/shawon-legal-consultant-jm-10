@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Button, Card, CardGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './HomeService.css';
 
@@ -20,7 +20,7 @@ const HomeService = (props) => {
                         {description}
                     </Card.Text>
                     <Link to={'/checkOut'}>
-                        <button className='button d-flex mx-auto'>Order</button>
+                        <Button variant="outline-warning d-flex text-decoration-none mx-auto px-5">Order</Button>
                     </Link>
                 </Card.Body>
             </Card>

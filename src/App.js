@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Notfound from './components/shared/Notfound/Notfound';
 import Footer from './components/shared/Footer/Footer';
 import Home from './components/home/Home/Home';
-import Service from './components/home/Service/Service';
+import Services from './components/home/Services/Services';
 import CheckOut from './components/home/CheckOut/CheckOut';
 import Clientele from './components/home/Clientele/Clientele';
 import Blog from './components/home/Blog/Blog';
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/service' element={<Service></Service>}></Route>
+        <Route path='/service' element={<Services></Services>}></Route>
         <Route path='/checkOut' element={<CheckOut></CheckOut>}></Route>
         <Route path='/clientele' element={<Clientele></Clientele>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
