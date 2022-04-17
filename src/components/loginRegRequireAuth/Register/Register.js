@@ -1,13 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../shared/Loading/Loading';
 import './Register.css';
 
 const Register = () => {
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    const navigate = useNavigate();
+
+    if (loading) {
+        return <Loading></Loading>;
+    }
+
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        createUserWithEmailAndPassword(email, password);
+        navigate('/home');
+    }
     return (
         <div className='register-form login-container'>
             <h2 style={{ textAlign: 'center' }}>Please Register</h2>
-            <form>
+            <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="" placeholder='Your Name' />
 
                 <input type="email" name="email" id="" placeholder='Email Address' required />
