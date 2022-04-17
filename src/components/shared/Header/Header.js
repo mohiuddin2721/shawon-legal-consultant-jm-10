@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar style={{'backgroundColor' : '#cc8809'}} collapseOnSelect expand="lg" variant="dark" sticky="top">
+            <Navbar style={{ 'backgroundColor': '#cc8809' }} collapseOnSelect expand="lg" variant="dark" sticky="top">
                 <Container>
                     <Navbar.Brand as={Link} to="/home">
                         <img className='rounded h-100 w-100' src={logo1} alt="" />
@@ -35,13 +35,24 @@ const Header = () => {
                             <Nav.Link className='text-light fw-bold' as={Link} to="/contact">CONTACT</Nav.Link>
                             <Nav.Link className='text-light fw-bold' as={Link} to="/aboutMe">ABOUT ME</Nav.Link>
                             {
-                                user 
-                                ?
-                                <button className='btn btn-link text-white text-decoration-none' onClick={handleLogOut}>Log out</button>
-                                :
-                                <Nav.Link className='text-light fw-bold' as={Link} to="/logIn">LOG IN</Nav.Link>
+                                user
+                                    ?
+                                    <button className='btn btn-link text-white fw-bold text-decoration-none' onClick={handleLogOut}>Log out</button>
+                                    :
+                                    <Nav.Link className='text-light fw-bold' as={Link} to="/logIn">LOG IN</Nav.Link>
                             }
-                            
+
+                        </Nav>
+                        <Nav className='me-auto'>
+                            {
+                                user &&
+                                <>
+                                    <Nav.Link className='fw-bold text-light'>{user?.displayName} </Nav.Link>
+                                    <Navbar.Brand>
+                                        <img style={{ 'borderRadius': '50%', 'maxHeight': '50px' }} src={user?.photoURL} alt="" />
+                                    </Navbar.Brand>
+                                </>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
