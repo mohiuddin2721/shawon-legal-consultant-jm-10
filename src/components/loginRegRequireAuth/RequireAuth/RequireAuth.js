@@ -6,7 +6,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import Loading from '../../shared/Loading/Loading';
 
 const RequireAuth = ({ children }) => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const location = useLocation();
 
     if (loading) {

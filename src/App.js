@@ -12,6 +12,7 @@ import Blog from './components/home/Blog/Blog';
 import Contact from './components/home/Contact/Contact';
 import AboutMe from './components/home/AboutMe/AboutMe';
 import Login from './components/loginRegRequireAuth/Login/Login';
+import Register from './components/loginRegRequireAuth/Register/Register';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/aboutMe' element={<AboutMe></AboutMe>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>
       </Routes>
