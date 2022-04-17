@@ -1,10 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/shared/Header/Header';
 
 function App() {
   return (
     <div>
-      <h1 className='text-danger'>Should install react router, react firebase hooks and react bootstrap.</h1>
+      <Header></Header>
     </div>
   );
 }
