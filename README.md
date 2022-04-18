@@ -1,6 +1,6 @@
 # Shawon Legal Consultant
 
-# Live site: [Shawon Legal Consultant](https://github.com/facebook/create-react-app)
+# Live site: [Shawon Legal Consultant](https://shawon-legal-consultant.web.app/)
 
 ## Features of Shawon Legal Consultant (Bullet Points)
 
@@ -19,3 +19,4 @@
 5. CSS
 6. React Toastify
 7. Font Awesome
+8. Github

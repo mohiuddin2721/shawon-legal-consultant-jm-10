@@ -5,7 +5,7 @@ import './Clientele.css';
 const Clientele = () => {
     return (
         <div className='container'>
-            <h2 className='text-center'>Happy Client</h2>
+            <h2 className='text-center text-warning m-3'>Happy Client</h2>
             <div className='row'>
                 <CardGroup className='col-md-4 col-6 shadow-sm rounded my-3'>
                     <Card>
