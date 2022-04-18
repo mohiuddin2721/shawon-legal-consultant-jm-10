@@ -5,7 +5,7 @@ const ClientWords = () => {
     return (
         <div className='clientWords-container'>
             <div className='container mt-5'>
-                <h1 className='text-center text-warning m-3'>CLIENTS' WORDS</h1>
+                <h1 className='text-center text-warning m-3 p-4'>CLIENTS' WORDS</h1>
                 <div className='row'>
                     <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 pe-5'>
                         <div>

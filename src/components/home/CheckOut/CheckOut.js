@@ -9,6 +9,7 @@ const CheckOut = () => {
         event.preventDefault();
         toast('Thank you for booking');
         alert('Thank you for your booking!!');
+        event.target.reset()
     }
     return (
         <div className='checkout-form m-5'>
