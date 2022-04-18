@@ -23,7 +23,7 @@ const CheckOut = () => {
                 <input type="text" name="address" id="" placeholder='Your Address' />
 
                 <input
-                    className='w-25 mx-auto btn btn-warning mt-2'
+                    className='w-25 mx-auto btn btn-warning mt-2 submit-button'
                     type="submit"
                     value="Submit" />
             </form>
