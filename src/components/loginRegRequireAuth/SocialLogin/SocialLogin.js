@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SocialLogin.css';
 import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import gitPic from '../../../images/github.png';
 import auth from '../../../firebase.init';
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../shared/Loading/Loading';
 
 const SocialLogin = () => {
+    let location = useLocation();
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
@@ -16,16 +17,23 @@ const SocialLogin = () => {
 
     const navigate = useNavigate();
 
+    let from = location.state?.from?.pathname || "/";
+
     let errorMassage;
+
+    useEffect( () => {
+
+        if (googleUser || gitUser || facebookUser) {
+            navigate(from, { replace: true });
+        }
+
+    }, [googleUser, gitUser, facebookUser, navigate, from])
 
     if (googleLoading || gitLoading || facebookLoading) {
         return <Loading></Loading>
     }
     if (googleError || gitError || facebookError) {
         errorMassage = <p className='text-danger'>Error: {googleError?.message} {gitError?.message} {facebookError?.message}</p>
-    }
-    if (googleUser || gitUser || facebookUser) {
-        navigate('/home');
     }
 
     return (
