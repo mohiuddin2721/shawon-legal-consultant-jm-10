@@ -47,7 +47,7 @@ const Header = () => {
                             {
                                 user &&
                                 <>
-                                    <Nav.Link className='fw-bold text-light'>{user?.displayName} </Nav.Link>
+                                    <Nav.Link className='fw-bold text-light mt-2'>{user?.displayName} </Nav.Link>
                                     <Navbar.Brand>
                                         <img style={{ 'borderRadius': '50%', 'maxHeight': '50px' }} src={user?.photoURL} alt="" />
                                     </Navbar.Brand>
