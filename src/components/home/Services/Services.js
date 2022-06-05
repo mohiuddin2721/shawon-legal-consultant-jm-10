@@ -13,6 +13,7 @@ const Services = () => {
         <div>
             <h1 style={{ 'color': '#cc8809' }} className='text-center m-3'>service of law</h1>
             <div className='row container mx-auto'>
+                {/* all service loaded */}
                 {
                     services.map(service => <Service
                         key={service.id}
